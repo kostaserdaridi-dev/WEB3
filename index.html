@@ -2,217 +2,235 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Задание 3</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<!-- Шапка сайта -->
-<header id="main-header" class="site-header">
-    <div class="container header-container">
-        <div class="logo-block">
-            <img src="https://www.castcom.ru/netcat_files/94/112/castcom_html.jpg" alt="Логотип сайта" class="logo-img" width="200" height="100">
-            <span class="site-title">Веб-Разработка</span>
+
+
+    <!-- Шапка сайта -->
+    <header id="main-header" class="site-header">
+        <div class="container header-container">
+            <div class="logo-block">
+                <img src="https://www.castcom.ru/netcat_files/94/112/castcom_html.jpg" alt="Логотип сайта" class="logo-img" width="120" height="60">
+                <span class="site-title">Веб-Разработка</span>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- Главный контейнер сетки: левое меню + правый контент -->
-<div class="layout-body container">
 
-    <!-- Навигационное меню (слева) -->
+
+    <!-- Навигационное меню -->
     <nav id="main-nav" class="site-nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="#" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="#table-section" class="nav-link">Таблица</a></li>
-            <li class="nav-item"><a href="#links-section" class="nav-link">Ссылки</a></li>
-            <li class="nav-item"><a href="#my_form" class="nav-link">Форма</a></li>
-        </ul>
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#links-section" class="nav-link">Ссылки</a></li>
+                <li class="nav-item"><a href="#table-section" class="nav-link">Таблица</a></li>
+                <li class="nav-item"><a href="#my_form" class="nav-link">Форма</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Основное содержимое (справа) -->
+
+
+    <!-- Основной контент -->
+
     <main class="main-content">
+        <div class="container content-flex-container">
 
-        <!-- Секция 1: Таблица -->
-        <section id="table-section" class="content-section">
-            <h2>Факультеты и направления КубГУ</h2>
-            <div class="table-wrapper">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>№</th>
-                            <th>Подразделение</th>
-                            <th>Направление подготовки</th>
-                            <th>Количество мест</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td rowspan="2">ФКТиПМ (Компьютерные науки)</td>
-                            <td>Прикладная математика и информатика</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Фундаментальная информатика</td>
-                            <td>45</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Физико-технический факультет</td>
-                            <td>Радиотехника</td>
-                            <td>30</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td colspan="2">Итого бюджетных мест на IT-направлениях</td>
-                            <td>125</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Юридический факультет</td>
-                            <td>Юриспруденция</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Экономический факультет</td>
-                            <td>Экономика и управление</td>
-                            <td>60</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+           
 
-        <!-- Секция 2: Ссылки -->
-        <section class="content-section">
-            <h2 id="links-section">Список ссылок</h2>
+            <!-- Таблица данных КубГУ (на смартфоне отображается выше списка за счет order: 1) -->
 
-            <ul>
-                <li><a href="http://kubsu.ru/">Главная страница КубГУ (http)</a></li>
-                <li><a href="https://kubsu.ru/">Главная КубГУ (https)</a></li>
-                <li>
-                    <a href="https://kubsu.ru/">
-                        <img src="https://gelendzhik.academica.ru/images/colleges/539/1690978231_64ca47b73389b.webp" alt="Логотип КубГУ" width="150" height="150">
-                    </a>
-                </li>
-                <li><a href="/ru/university/library">Библиотека КубГУщенная)</a></li>
-                <li><a href="/">Главная страница (сокращенная)</a></li>
-                <li><a href="#my_form">Ссылка на форму внизу страницы</a></li>
-                <li><a href="https://www.kubsu.ru/ru/university/library?director=Maryana&amp;year=1920&amp;phonenumber=8612199552">Библиотека КубГУ (Ссылка с 3 параметрами)</a></li>
-                <li><a href="https://primer.ru/user?id=123">Профиль студента</a></li>
-                <li><a href="./page1.html">Страница в текущем каталоге</a></li>
-                <li><a href="./about/page2.html">Страница в каталоге about</a></li>
-                <li><a href="../page3.html">На уровень выше</a></li>
-                <li><a href="../../page4.html">На два уровня выше</a></li>
-                <li>
-                    <p>Переходите на <a href="https://kubsu.ru">главную страницу</a> КубГУ.</p>
-                </li>
-                <li><a href="https://www.kubsu.ru/ru#Важное">Фрагмент страницы Сайта КубГУ</a></li>
-                <li>
-                    <p>Картинка с прямоугольной и круглой областями (map):</p>
-                    <img src="https://avatars.mds.yandex.net/get-altay/16413591/2a00000198704e5962c2b70cdf304d247347/XXL_height" alt="Карта" usemap="#map1" width="400" height="200">
-                    <map name="map1">
-                        <area shape="rect" coords="0,0,150,200" href="https://kubsu.ru" alt="КубГУ">
-                        <area shape="circle" coords="300,100,50" href="https://kubsu.ru" alt="Пример">
-                    </map>
-                </li>
-                <li><a href="">Пустой href</a></li>
-                <li><a>Ссылка без href</a></li>
-                <li><a href="https://primer.ru" rel="nofollow">Ссылка с запретом поисковикам</a></li>
-                <li><!--noindex--><a href="https://example.ru">Ссылка с запретом (индексация)</a><!--/noindex--></li>
-                <li>
-                    <p>Главные страницы:</p>
-                    <ol>
-                        <li><a href="https://kubsu.ru" title="Главная страница КубГУ">Главная страница КубГУ</a></li>
-                        <li><a href="https://www.kubsu.ru/ru/university" title="об университете">Об Университете</a></li>
-                        <li><a href="https://www.kubsu.ru/ru/education" title="Образование">Образование</a></li>
-                        <li><a href="https://www.kubsu.ru/ru/abiturient" title="Абитуриентов">Абитуриентам</a></li>
-                        <li><a href="https://www.kubsu.ru/ru/studlife" title="Студентам">Студентам</a></li>
-                    </ol>
-                </li>
-                <li><a href="ftp://user:password@ftp.primer.ru/file.txt">FTP ссылка с авторизацией</a></li>
-            </ul>
-        </section>
+            <section id="table-section" class="content-section table-block">
+                <h2>Факультеты и направления КубГУ</h2>
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Подразделение</th>
+                                <th>Направление подготовки</th>
+                                <th>Количество мест</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td rowspan="2">ФКТиПМ (Компьютерные науки)</td>
+                                <td>Прикладная математика и информатика</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Фундаментальная информатика</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Физико-технический факультет</td>
+                                <td>Радиотехника</td>
+                                <td>30</td>
+                            </tr>
 
-        <!-- Секция 3: Форма -->
-        <section class="content-section">
-            <h2 id="my_form">Форма</h2>
+                            <tr>
+                                <td>4</td>
+                                <td colspan="2">Итого бюджетных мест на IT-направлениях</td>
+                                <td>125</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Юридический факультет</td>
+                                <td>Юриспруденция</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Экономический факультет</td>
+                                <td>Экономика и управление</td>
+                                <td>60</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-            <form action="/" method="POST">
-                <p>
-                    <label for="fio">ФИО:</label>
-                    <input type="text" id="fio" name="fio" placeholder="ФИО">
-                </p>
 
-                <p>
-                    <label for="phone">Телефон:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+79_________">
-                </p>
 
-                <p>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="***@mail.ru">
-                </p>
+            <!-- Список гиперссылок (на смартфоне идет после таблицы за счет order: 2) -->
 
-                <p>
-                    <label for="birthday">Дата рождения:</label>
-                    <input type="date" id="birthday" name="birthday">
-                </p>
+            <section id="links-section" class="content-section links-block">
 
-                <p>
-                    Пол:
-                    <label><input type="radio" name="gender" value="male" checked> Мужской</label>
-                    <label><input type="radio" name="gender" value="female"> Женский</label>
-                </p>
+                <h2>Список ссылок</h2>
 
-                <p>
-                    <label for="languages">Любимый язык программирования:</label>
-                    <select id="languages" name="languages" multiple size="6">
-                        <option value="pascal">Pascal</option>
-                        <option value="c">C</option>
-                        <option value="cpp">C++</option>
-                        <option value="js">JavaScript</option>
-                        <option value="php">PHP</option>
-                        <option value="python">Python</option>
-                        <option value="java">Java</option>
-                        <option value="haskell">Haskell</option>
-                        <option value="clojure">Clojure</option>
-                        <option value="prolog">Prolog</option>
-                        <option value="scala">Scala</option>
-                    </select>
-                </p>
+                <ul>
 
-                <p>
-                    <label for="bio">Биография:</label>
-                    <textarea id="bio" name="bio" rows="5" cols="40"></textarea>
-                </p>
+                    <li><a href="http://kubsu.ru/">Главная страница КубГУ (http)</a></li>
+                    <li><a href="https://kubsu.ru/">Главная КубГУ (https)</a></li>
+                    <li>
+                        <a href="https://kubsu.ru/">
+                            <img src="https://gelendzhik.academica.ru/images/colleges/539/1690978231_64ca47b73389b.webp" alt="Логотип КубГУ" width="100" height="100">
+                        </a>
 
-                <p>
-                    <label>
-                        <input type="checkbox" name="agree" required> С контрактом ознакомлен(а)
-                    </label>
-                </p>
+                    </li>
+                    <li><a href="/ru/university/library">Библиотека КубГУ (сокращенная)</a></li>
+                    <li><a href="/">Главная страница (сокращенная)</a></li>
+                    <li><a href="#my_form">Ссылка на форму внизу страницы</a></li>
+                    <li><a href="https://www.kubsu.ru/ru/university/library?director=Maryana&amp;year=1920&amp;phonenumber=8612199552">Библиотека КубГУ (Ссылка с 3 параметрами)</a></li>
+                    <li><a href="https://primer.ru/user?id=123">Профиль студента</a></li>
+                    <li><a href="./page1.html">Страница в текущем каталоге</a></li>
+                    <li><a href="./about/page2.html">Страница в каталоге about</a></li>
+                    <li><a href="../page3.html">На уровень выше</a></li>
+                    <li><a href="../../page4.html">На два уровня выше</a></li>
+                    <li>
+                        <p>Переходите на <a href="https://kubsu.ru">главную страницу</a> КубГУ.</p>
+                    </li>
+                    <li><a href="https://www.kubsu.ru/ru#Важное">Фрагмент страницы Сайта КубГУ</a></li>
+                    <li>
+                        <p>Картинка с областями (map):</p>
+                        <img src="https://avatars.mds.yandex.net/get-altay/16413591/2a00000198704e5962c2b70cdf304d247347/XXL_height" alt="Карта" usemap="#map1" width="300" height="150">
+                        <map name="map1">
+                            <area shape="rect" coords="0,0,100,150" href="https://kubsu.ru" alt="КубГУ">
+                            <area shape="circle" coords="200,75,40" href="https://kubsu.ru" alt="Пример">
+                        </map>
 
-                <p>
-                    <input type="submit" value="Сохранить">
-                </p>
-            </form>
-        </section>
+                    </li>
 
+                    <li><a href="">Пустой href</a></li>
+                    <li><a>Ссылка без href</a></li>
+                    <li><a href="https://primer.ru" rel="nofollow">Ссылка с запретом поисковикам</a></li>
+                    <li><!--noindex--><a href="https://example.ru">Ссылка с запретом (индексация)</a><!--/noindex--></li>
+                    <li>
+                        <p>Главные страницы:</p>
+
+                        <ol>
+                            <li><a href="https://kubsu.ru" title="Главная страница КубГУ">Главная страница КубГУ</a></li>
+                            <li><a href="https://www.kubsu.ru/ru/university" title="об университете">Об Университете</a></li>
+                            <li><a href="https://www.kubsu.ru/ru/education" title="Образование">Образование</a></li>
+                            <li><a href="https://www.kubsu.ru/ru/abiturient" title="Абитуриентов">Абитуриентам</a></li>
+                            <li><a href="https://www.kubsu.ru/ru/studlife" title="Студентам">Студентам</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="ftp://user:password@ftp.primer.ru/file.txt">FTP ссылка с авторизацией</a></li>
+                </ul>
+            </section>
+
+
+
+            <!-- Форма -->
+            <section id="form-section" class="content-section form-block">
+                <h2 id="my_form">Форма</h2>
+                <form action="/" method="POST">
+                    <p>
+                        <label for="fio">ФИО:</label>
+                        <input type="text" id="fio" name="fio" placeholder="ФИО">
+                    </p>
+
+                    <p>
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+79_________">
+                    </p>
+
+                    <p>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="***@mail.ru">
+                    </p>
+
+                    <p>
+                        <label for="birthday">Дата рождения:</label>
+                        <input type="date" id="birthday" name="birthday">
+                    </p>
+
+                    <p>
+                        Пол:
+                        <label><input type="radio" name="gender" value="male" checked> Мужской</label>
+                        <label><input type="radio" name="gender" value="female"> Женский</label>
+                    </p>
+
+                    <p>
+
+                        <label for="languages">Любимый язык программирования:</label>
+                        <select id="languages" name="languages" multiple size="6">
+                            <option value="pascal">Pascal</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="js">JavaScript</option>
+                            <option value="php">PHP</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="haskell">Haskell</option>
+                            <option value="clojure">Clojure</option>
+                            <option value="prolog">Prolog</option>
+                            <option value="scala">Scala</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="bio">Биография:</label>
+                        <textarea id="bio" name="bio" rows="5" cols="40"></textarea>
+                    </p>
+                    <p>
+
+                        <label>
+                            <input type="checkbox" name="agree" required> С контрактом ознакомлен(а)
+                        </label>
+
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Сохранить">
+                    </p>
+                </form>
+            </section>
+        </div> 
     </main>
-
-</div> <!-- Конец .layout-body -->
-
-<!-- Подвал сайта -->
-<footer class="site-footer">
-    <div class="container">
-        <p>&copy; 2026 КубГУ — Все права защищены</p>
-    </div>
-</footer>
-
+    <!-- Подвал сайта -->
+    <footer id="main-footer" class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; Сергей Синица 2023</p>
+        </div>
+    </footer>
 </body>
 </html>
